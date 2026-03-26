@@ -1,0 +1,6 @@
+id,name,price,image,release_date,lte_exists
+1,Samsung Galaxy S21,59990,https://images.samsung.com/is/image/samsung/p6pim/sm-g991bzadeua/gallery/sm-g991bzadeua-phone-front-gold-356651099?$684_547_PNG$,2021-01-29,True
+2,Apple iPhone 13,79990,https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572317318,2021-09-24,True
+3,Xiaomi Mi 11,49990,https://i01.appmifile.com/webfile/globalimg/7/6/6/9/7/76697-2e0f2e0c-9b2f-4b5a-8c2e-8a4e9b6f2e0c.png,2021-02-08,True
+4,Google Pixel 6,64990,https://lh3.googleusercontent.com/7wU8MpOe6Q9lQ3J0k5x2n7y3z9q1m4v8w6r2t4p6o0u1y5e3a8i2u0y5e3a8i2u,2021-10-28,True
+5,OnePlus 9 Pro,69990,https://www.oneplus.com/content/dam/oasis/page/common/9pro/specs/OnePlus-9-Pro-Morning-Mist.png,2021-03-23,True
