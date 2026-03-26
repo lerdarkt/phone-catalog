@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Каталог телефонов</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .phones { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .phone { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        img { width: 100%; height: 200px; object-fit: contain; }
+        .sorting { margin-bottom: 20px; }
+        .sorting a { margin-right: 10px; text-decoration: none; color: blue; }
+        .sorting a.active { font-weight: bold; color: red; }
+    </style>
+</head>
+<body>
+    <h1>Каталог телефонов</h1>
+    <div class="sorting">
+        <a href="?sort=name" {% if current_sort == 'name' %}class="active"{% endif %}>По названию</a>
+        <a href="?sort=min_price" {% if current_sort == 'min_price' %}class="active"{% endif %}>Сначала дешёвые</a>
+        <a href="?sort=max_price" {% if current_sort == 'max_price' %}class="active"{% endif %}>Сначала дорогие</a>
+    </div>
+    <div class="phones">
+        {% for phone in phones %}
+        <div class="phone">
+            <img src="{{ phone.image }}" alt="{{ phone.name }}">
+            <h3><a href="{% url 'phone_detail' slug=phone.slug %}">{{ phone.name }}</a></h3>
+            <p>Цена: {{ phone.price }} ₽</p>
+            <p>Дата выхода: {{ phone.release_date }}</p>
+            <p>LTE: {% if phone.lte_exists %}Да{% else %}Нет{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
